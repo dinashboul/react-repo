@@ -1,7 +1,7 @@
 import React from "react";
-import Header from './header';
-import Main from './main'
-import Footer from './footer';
+import Header from './component/Header';
+import Main from './component/Main'
+import Footer from './component/Footer';
 
 
 class App extends React.Component {
@@ -9,9 +9,9 @@ class App extends React.Component {
         return(
             <div>
                 <Header />
-                <div >   
+                 
                 <Main />
-                </div>
+               
                 <Footer />
             </div>
         )

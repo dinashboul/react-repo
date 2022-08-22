@@ -3,7 +3,7 @@ import React from "react";
 class Footer extends React.Component {
     render() {
         return(
-            <author>Dina shboul</author>
+            <author><h2>Dina shboul</h2></author>
         )
     }
 }
