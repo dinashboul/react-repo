@@ -3,6 +3,8 @@ import React from "react";
 import 'bootstrap/dist/css/bootstrap.min.css';
 import Button from 'react-bootstrap/Button';
 import Card from 'react-bootstrap/Card';
+import Col from 'react-bootstrap/Col';
+
 
 // console.log(myJson.person.name);
 class HornedBeast extends React.Component {
@@ -23,9 +25,9 @@ class HornedBeast extends React.Component {
     render() {
 
         return(
-           
-            <Card style={{ width: '18rem',display:'inline-block' }} className="beast-card" >
-            <Card.Body class="card-deck" >
+            <Col>          
+              <Card style={{ width: '18rem' }} className="beast-card" >
+            <Card.Body >
             <Card.Title >{this.props.title}</Card.Title>
             <Card.Img style={{ width: '50%' ,height:'50%'}} variant="top" src={this.props.img} onClick={this.incrementNumOfPets} />
             <Card.Text>
@@ -41,7 +43,8 @@ class HornedBeast extends React.Component {
                 <Button variant="primary">Go somewhere</Button>
             </Card.Body>
         </Card>
-        
+        </Col>
+
             )
     }
 }

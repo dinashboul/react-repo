@@ -1,16 +1,11 @@
 import React from "react";
 import HornedBeast from './HornedBeast';
-// import h1 from './component/assest/h1.jpg';
-// import hh2 from './component/assest/hh2.jpg';
-import packJson from "./pack.json";
+import Row from 'react-bootstrap/Row';
+import packJson  from "./pack.json";
+
 
 let Data = packJson.map(val => 
-
-
-    
-
-
-        <HornedBeast 
+ <HornedBeast 
             key = {val._id}
             title = {val.title}
             img = {val.image_url}
@@ -21,8 +16,9 @@ let Data = packJson.map(val =>
     class Main extends React.Component {
         render(){
             return(
-                Data
-                
+                <Row xs={4} md={4} className='g-4'>
+                {Data}
+                </Row>
             )
         }
     }
