@@ -31,8 +31,9 @@ class HornedBeast extends React.Component {
             <Card.Text>
                     Numbers
                 </Card.Text>
+                <Card.Text className="horns">Horns: {this.props.horns}</Card.Text>
                 <Card.Text>
-                    😸 Num of pets: {this.state.numOfPets}
+                    😸 Num of hornBeast: {this.state.numOfPets}
                 </Card.Text>
                 <Card.Text className="desc">{this.props.description}</Card.Text> 
                
@@ -45,7 +46,7 @@ class HornedBeast extends React.Component {
               );
             }}
           >
-            Expand
+           ShowModel
           </Button>
             </Card.Body>
         </Card>
