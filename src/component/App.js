@@ -4,6 +4,7 @@ import Main from './Main'
 import Footer from './Footer';
 import data  from "./pack.json";
 import SelectedBeast from "./SelectedBeast";
+import selectF from './Form';
 
 
 class App extends React.Component {
@@ -13,16 +14,17 @@ class App extends React.Component {
         show: false,
         title: "",
         img: "",
-        desc: "",
+        description: "",
       };
     }
   
-    showModal = (title, img, desc) => {
+    showModal = (title, img, description) => {
       this.setState({
         show: true,
         title: title,
         img: img,
-        desc: desc,
+        description: description,
+        horns:"",
       });
     };
   
@@ -31,15 +33,27 @@ class App extends React.Component {
         show: false,
       });
     };
-  
+
+    HornBeastNums=(h)=>{
+      this.setState({
+        horns:h.target.value,
+      })
+    }
+      
     render() {
       return (
         <div>
+          
           <Header />
-          <div className="cards">
+          < selectF HornBeastNums={this.HornBeastNums} />
+        <div className="cards">
             <Main 
             data={data} 
-            showModal={this.showModal} />
+            showModal={this.showModal} 
+            HornBeastNums={this.state}
+            />
+             
+
             <SelectedBeast
               show={this.state.show}
               selectedBeastData={this.state}

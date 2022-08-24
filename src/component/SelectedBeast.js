@@ -14,14 +14,19 @@ class SelectedBeast extends React.Component {
         <Modal.Header>
           <Modal.Title id="contained-modal-title-vcenter">
             <h2>{this.props.selectedBeastData.title}</h2>
+            
           </Modal.Title>
+         
         </Modal.Header>
         <Modal.Body>
-          <img
+        
+          <img style={{ width: '50%' ,height:'50%'}}
             src={this.props.selectedBeastData.img}
             alt={this.props.selectedBeastData.title}
+            
           />
-          <p>{this.props.selectedBeastData.desc}</p>
+          <p>{this.props.selectedBeastData.description}</p>
+          
         </Modal.Body>
         <Modal.Footer>
           <Button onClick={this.props.closeModal}>Close</Button>

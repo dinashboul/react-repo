@@ -14,6 +14,7 @@ class Main extends React.Component {
           description={element.description}
           showModal={this.props.showModal}
         />
+        
         </Row>
       ));
     
