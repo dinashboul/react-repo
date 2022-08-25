@@ -2,7 +2,6 @@ import React from "react";
 import 'bootstrap/dist/css/bootstrap.min.css';
 import Button from 'react-bootstrap/Button';
 import Card from 'react-bootstrap/Card';
-import Col from 'react-bootstrap/Col';
 
 
 class HornedBeast extends React.Component {
@@ -23,15 +22,16 @@ class HornedBeast extends React.Component {
     render() {
 
         return(
-            <Col>          
-              <Card style={{ width: '18rem',display:'inline-block' }}class="card-deck" >
-            <Card.Body >
+                     
+              <Card style={{ width: '18rem', gap: '20%' ,display:"inline-block"} }>
+                
+                 
+            <Card.Body  >
+            <Card.Text className="horns">id: {this.props.id}</Card.Text>
             <Card.Title >{this.props.title}</Card.Title>
-            <Card.Img style={{ width: '50%' ,height:'50%'}} variant="top" src={this.props.img} onClick={this.incrementNumOfPets} />
-            <Card.Text>
-                    Numbers
-                </Card.Text>
-                <Card.Text className="horns">Horns: {this.props.horns}</Card.Text>
+            <Card.Img style={{ width: '50%' ,height:'50%'}} alt="this.props.title"  variant="top" src={this.props.img} onClick={this.incrementNumOfPets} />
+        
+            <Card.Text className="horns">horns: {this.props.horns}</Card.Text>
                 <Card.Text>
                     😸 Num of hornBeast: {this.state.numOfPets}
                 </Card.Text>
@@ -49,9 +49,11 @@ class HornedBeast extends React.Component {
            ShowModel
           </Button>
             </Card.Body>
+            
+          
         </Card>
-        </Col>
-
+        
+            
             )
     }
 }

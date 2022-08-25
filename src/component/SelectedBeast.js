@@ -2,7 +2,7 @@ import React from "react";
 import Button from "react-bootstrap/Button";
 import Modal from "react-bootstrap/Modal";
 
-class SelectedBeast extends React.Component {
+class SelectedBeastData extends React.Component {
   render() {
     return (
       <Modal
@@ -13,19 +13,19 @@ class SelectedBeast extends React.Component {
       >
         <Modal.Header>
           <Modal.Title id="contained-modal-title-vcenter">
-            <h2>{this.props.selectedBeastData.title}</h2>
-            
+            <h2>{this.props.SelectedBeastData.title}</h2>
+            <p>{this.props.SelectedBeastData.description}</p>
           </Modal.Title>
          
         </Modal.Header>
         <Modal.Body>
         
           <img style={{ width: '50%' ,height:'50%'}}
-            src={this.props.selectedBeastData.img}
-            alt={this.props.selectedBeastData.title}
+            src={this.props.SelectedBeastData.img}
+            alt={this.props.SelectedBeastData.title}
             
           />
-          <p>{this.props.selectedBeastData.description}</p>
+          
           
         </Modal.Body>
         <Modal.Footer>
@@ -35,4 +35,4 @@ class SelectedBeast extends React.Component {
     );
   }
 }
-  export default SelectedBeast;
+  export default SelectedBeastData;
