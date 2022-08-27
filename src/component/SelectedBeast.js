@@ -14,7 +14,7 @@ class SelectedBeastData extends React.Component {
         <Modal.Header>
           <Modal.Title id="contained-modal-title-vcenter">
             <h2>{this.props.SelectedBeastData.title}</h2>
-            <p>{this.props.SelectedBeastData.description}</p>
+            
           </Modal.Title>
          
         </Modal.Header>
@@ -25,6 +25,7 @@ class SelectedBeastData extends React.Component {
             alt={this.props.SelectedBeastData.title}
             
           />
+          <p>{this.props.SelectedBeastData.desc}</p>
           
           
         </Modal.Body>
