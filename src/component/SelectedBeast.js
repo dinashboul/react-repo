@@ -20,7 +20,7 @@ class SelectedBeastData extends React.Component {
         </Modal.Header>
         <Modal.Body>
         
-          <img style={{ width: '50%' ,height:'50%'}}
+          <img style={{ width: '100%' }}
             src={this.props.SelectedBeastData.img}
             alt={this.props.SelectedBeastData.title}
             
